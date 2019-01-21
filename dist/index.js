@@ -1,4 +1,5 @@
-module.exports =
+module.exports = 
+// 更改 handleSelectedChange 函数内this.label的取值规则
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -4642,7 +4643,14 @@ if (false) {(function () {
         handleSelectedChange: function handleSelectedChange() {
             this.shown = false;
             this.values = [].concat(this.activeValues);
-            this.label = this.labels.join(this.separator);
+            // this.label = this.labels.join(this.separator);更改前
+            // --- 更改后
+            if (this.labels[this.labels.length - 1] === '---') {
+              this.label = this.labels[this.labels.length - 2]
+            } else {
+              this.label = this.labels[this.labels.length - 1]
+            }
+            // ---
             if (!this.isClickOutSide) {
                 this.$emit('change', this.values, this.labels);
             }

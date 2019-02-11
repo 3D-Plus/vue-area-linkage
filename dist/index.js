@@ -3935,7 +3935,7 @@ if (false) {(function () {
         },
         beforeSetDefault: function beforeSetDefault() {
             var chinese = /^[\u4E00-\u9FA5\uF900-\uFA2D]{2,}$/;
-            var num = /^\d{6,}$/;
+            var num = /^\d{5,}$/;
             var isCode = num.test(this.value[0]);
             var isValid = void 0;
 
@@ -5018,7 +5018,7 @@ if (false) {(function () {
     methods: {
         beforeSetDefault: function beforeSetDefault() {
             var chinese = /^[\u4E00-\u9FA5\uF900-\uFA2D]{2,}$/;
-            var num = /^\d{6,}$/;
+            var num = /^\d{5,}$/;
             var isCode = num.test(this.value[0]);
             var isValid = void 0;
 
